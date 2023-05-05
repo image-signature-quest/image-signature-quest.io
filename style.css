@@ -1,11 +1,6 @@
-body {
+body{
     background-image: url('static/images/backgroud.png');
-    /* background-color: rgb(255, 163, 159);
-    background: linear-gradient(
-        0deg,
-        rgba(255, 163, 159, 1) 0%,
-        rgba(224, 243, 175, 1) 100%
-    ); */
+
 }
 h2 {
     padding: 30px;
