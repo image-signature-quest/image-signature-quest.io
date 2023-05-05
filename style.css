@@ -1,7 +1,13 @@
-body{
+body {
     background-image: url('static/images/backgroud.png');
+    /* background-color: rgb(255, 163, 159);
+    background: linear-gradient(
+        0deg,
+        rgba(255, 163, 159, 1) 0%,
+        rgba(224, 243, 175, 1) 100%
+    ); */
 }
-h2{
+h2 {
     padding: 30px;
 }
 
@@ -27,8 +33,7 @@ h2{
     align-items: center;
 }
 
-
-.circle p{
+.circle p {
     display: block;
     line-height: 1;
     text-align: center;
@@ -41,14 +46,31 @@ h2{
     transform: translate(-50%, -50%);
 }
 
-
-.circle:hover{
+.circle:hover {
     cursor: pointer;
     background-color: #f0f0f0;
 }
 
-.question:hover{
+.circleactive {
+    background-color: #f0f0f0;
+    box-shadow: 0 5px #666;
+}
+
+.question {
+    transition: all 0.2s ease-in-out;
+}
+
+.question:hover {
     cursor: pointer;
+    transform: scale(1.1);
+}
+
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
 }
 
 .bottom-div {
@@ -58,30 +80,128 @@ h2{
     right: 0;
     width: 100%;
     height: fit-content;
- }
+}
 
-.logo{
+.logo {
     width: 150px;
 }
 
-.quest-card{
+.quest-card {
     background-color: #ffffff;
     width: 100%;
     padding-bottom: 40px;
     border-radius: 10%;
 }
 
-
-.palette .row{
+.palette .row {
     margin: 0 20px 0 20px;
     height: 60px;
 }
 
+.split4-circle-tan {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #d0a778, #d0a778 100%),
+        linear-gradient(135deg, #cc8a75, #cc8a75),
+        linear-gradient(225deg, #86613a, #86613a),
+        linear-gradient(225deg, #864738, #864738);
+    background-size: 49.5% 49.5%;
+    background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.split4-circle-bright {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #fef8e3, #fef8e3 100%),
+        linear-gradient(135deg, #faebe3, #faebe3),
+        linear-gradient(225deg, #fbe6bd, #fbe6bd),
+        linear-gradient(225deg, #f4ccbb, #f4ccbb);
+    background-size: 49.5% 49.5%;
+    background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.split2-circle-brown {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #bb986f, #bb986f 100%),
+        linear-gradient(135deg, #bb986f, #bb986f),
+        linear-gradient(225deg, #8a5927, #8a5927),
+        linear-gradient(225deg, #8a5927, #8a5927);
+    background-size: 49.5% 100%;
+    background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.split2-circle-dark-brown {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #39240d, #39240d 100%),
+        linear-gradient(135deg, #39240d, #39240d),
+        linear-gradient(225deg, #000000, #000000),
+        linear-gradient(225deg, #000000, #000000);
+    background-size: 49.5% 100%;
+    background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.custom-header {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 29px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1rem;
+}
+
+.grid-container {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 5px;
+}
+
+.grid-container > div {
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.circle-palette {
+    width: 25px;
+    height: 25px;
+    background-color: rgba(2, 88, 145, 0.8);
+    text-align: center;
+    border-radius: 50%;
+}
+
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-    .quest-card{
+    .quest-card {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
     }
-  }
+}
+
+@media only screen and (min-width: 768px) {
+    #palette-card {
+        width: fit-content;
+        align-items: center;
+        display: flex;
+        padding: 20px;
+    }
+    #palette-card .col {
+        margin-right: 1rem;
+    }
+}
